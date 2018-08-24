@@ -19,4 +19,10 @@ public class SampleController {
 		return new ResponseEntity<String>("Hello, "+ name, HttpStatus.OK);
 	}
 	
+	@GetMapping("/helloNew")
+	public ResponseEntity<String> sayHelloNew(@RequestParam("name") String name ) {
+		LOGGER.info("Request Parametere is {}", name);
+		return new ResponseEntity<String>("Hello, "+ name + ". How are you?", HttpStatus.OK);
+	}
+	
 }
