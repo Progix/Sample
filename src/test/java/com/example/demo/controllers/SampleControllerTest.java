@@ -27,7 +27,7 @@ public class SampleControllerTest {
 	
 	@Test
 	public void testSayHelloNew() throws Exception {
-		mvc.perform(get("/helloNew?firstName=Priyesh").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+		mvc.perform(get("/helloNewWorld?firstName=Priyesh").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andExpect(content().string("Hello, Priyesh. How are you?"));
 	}
 
