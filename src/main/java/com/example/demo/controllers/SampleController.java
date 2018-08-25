@@ -25,4 +25,10 @@ public class SampleController {
 		return new ResponseEntity<String>("Hello, "+ name + ". How are you?", HttpStatus.OK);
 	}
 	
+	@GetMapping("/helloJenkins")
+	public ResponseEntity<String> sayJenkins(@RequestParam("name") String name ) {
+		LOGGER.info("Request Parametere is {}", name);
+		return new ResponseEntity<String>("Hello From Jenkins, "+ name + ". How are you?", HttpStatus.OK);
+	}
+	
 }
