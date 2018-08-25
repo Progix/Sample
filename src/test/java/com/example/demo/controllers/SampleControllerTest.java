@@ -30,5 +30,11 @@ public class SampleControllerTest {
 		mvc.perform(get("/helloNewWorld?firstName=Priyesh").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andExpect(content().string("Hello, Priyesh. How are you?"));
 	}
+	
+	@Test
+	public void testSayJenkins() throws Exception {
+		mvc.perform(get("/helloJenkins?name=Priyesh").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+				.andExpect(content().string("Hello From Jenkins, Priyesh. How are you?"));
+	}
 
 }
